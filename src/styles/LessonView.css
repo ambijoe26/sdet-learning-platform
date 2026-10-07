@@ -1,0 +1,214 @@
+.lesson-view {
+  animation: fadeIn 0.3s ease;
+}
+
+.lesson-header {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.lesson-header h2 {
+  font-size: 28px;
+  margin: 15px 0;
+  color: var(--dark-text);
+}
+
+.lesson-content {
+  display: grid;
+  gap: 30px;
+}
+
+.lesson-section,
+.outcomes-section,
+.exercises-section,
+.code-section,
+.resources-section,
+.completion-section {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.lesson-section h3,
+.outcomes-section h3,
+.exercises-section h3,
+.code-section h3,
+.resources-section h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: var(--dark-text);
+}
+
+/* Markdown Content */
+.markdown-content {
+  color: var(--dark-text);
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+  margin: 25px 0 15px 0;
+  color: var(--dark-text);
+}
+
+.markdown-content h1 {
+  font-size: 28px;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.markdown-content h2 {
+  font-size: 22px;
+}
+
+.markdown-content h3 {
+  font-size: 18px;
+}
+
+.markdown-content p {
+  margin: 15px 0;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  margin: 15px 0 15px 25px;
+}
+
+.markdown-content li {
+  margin: 8px 0;
+}
+
+.markdown-content code {
+  background: var(--light-bg);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  color: var(--danger-color);
+}
+
+.markdown-content pre {
+  background: var(--light-bg);
+  padding: 15px;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 15px 0;
+}
+
+.markdown-content blockquote {
+  border-left: 4px solid var(--primary-color);
+  padding-left: 15px;
+  margin: 15px 0;
+  color: var(--gray-text);
+  font-style: italic;
+}
+
+/* Learning Outcomes */
+.outcomes-section ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+.outcomes-section li {
+  background: linear-gradient(135deg, #f0f4ff 0%, #e6edff 100%);
+  padding: 15px;
+  border-left: 4px solid var(--primary-color);
+  border-radius: 6px;
+}
+
+/* Exercises */
+.exercises-list {
+  display: grid;
+  gap: 15px;
+}
+
+.exercise-card {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.exercise-card h4 {
+  margin: 0 0 10px 0;
+  color: var(--dark-text);
+}
+
+.exercise-card p {
+  margin: 0 0 15px 0;
+  color: var(--gray-text);
+  font-size: 14px;
+}
+
+.difficulty {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.difficulty.easy {
+  background: rgba(72, 187, 120, 0.2);
+  color: var(--success-color);
+}
+
+.difficulty.medium {
+  background: rgba(237, 137, 54, 0.2);
+  color: var(--warning-color);
+}
+
+.difficulty.hard {
+  background: rgba(229, 62, 62, 0.2);
+  color: var(--danger-color);
+}
+
+/* Code Section */
+.code-section {
+  overflow: hidden;
+}
+
+/* Completion Section */
+.completion-section {
+  text-align: center;
+}
+
+.btn-complete {
+  background: linear-gradient(135deg, var(--success-color) 0%, #2f855a 100%);
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.btn-complete:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(72, 187, 120, 0.3);
+}
+
+.btn-complete:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-complete.completed {
+  background: linear-gradient(135deg, #a0aec0 0%, #718096 100%);
+}
+
+@media (max-width: 768px) {
+  .outcomes-section ul {
+    grid-template-columns: 1fr;
+  }
+}

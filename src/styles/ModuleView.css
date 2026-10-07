@@ -1,0 +1,234 @@
+.module-view {
+  animation: fadeIn 0.3s ease;
+}
+
+.module-header {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.module-header h2 {
+  font-size: 28px;
+  margin: 20px 0 10px 0;
+  color: var(--dark-text);
+}
+
+.module-header p {
+  color: var(--gray-text);
+  font-size: 16px;
+}
+
+.module-content {
+  display: grid;
+  gap: 30px;
+}
+
+/* Lessons Section */
+.lessons-section,
+.projects-section,
+.module-stats {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.lessons-section h3,
+.projects-section h3,
+.module-stats h3 {
+  font-size: 22px;
+  margin-bottom: 25px;
+  color: var(--dark-text);
+}
+
+.lessons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.lesson-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--primary-color);
+}
+
+.lesson-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.2);
+}
+
+.lesson-number {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.lesson-info {
+  flex: 1;
+}
+
+.lesson-info h4 {
+  margin: 0 0 8px 0;
+  color: var(--dark-text);
+  font-size: 16px;
+}
+
+.lesson-info p {
+  margin: 0 0 12px 0;
+  color: var(--gray-text);
+  font-size: 14px;
+}
+
+.lesson-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 13px;
+  color: var(--gray-text);
+}
+
+.lesson-arrow {
+  font-size: 24px;
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+/* Projects Section */
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid var(--warning-color);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 12px;
+  gap: 10px;
+}
+
+.project-header h4 {
+  margin: 0;
+  color: var(--dark-text);
+}
+
+.difficulty-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.difficulty-badge.easy {
+  background: rgba(72, 187, 120, 0.2);
+  color: var(--success-color);
+}
+
+.difficulty-badge.medium {
+  background: rgba(237, 137, 54, 0.2);
+  color: var(--warning-color);
+}
+
+.difficulty-badge.hard {
+  background: rgba(229, 62, 62, 0.2);
+  color: var(--danger-color);
+}
+
+.project-card p {
+  margin: 0 0 15px 0;
+  color: var(--gray-text);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.project-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 13px;
+  color: var(--gray-text);
+  margin-bottom: 15px;
+}
+
+.btn-start-project {
+  width: 100%;
+  background: linear-gradient(135deg, var(--warning-color) 0%, #de751f 100%);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-start-project:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(237, 137, 54, 0.3);
+}
+
+/* Module Stats */
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  color: var(--gray-text);
+  font-size: 13px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.stat-value {
+  display: block;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .projects-list {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .lesson-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

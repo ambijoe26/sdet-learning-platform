@@ -16,6 +16,8 @@ interface ViewState {
   lessonId?: string;
 }
 
+const appVersion = '1.0.0';
+
 const AppContent: React.FC = () => {
   const { user, setUser } = useProgress();
   const [viewState, setViewState] = useState<ViewState>({ view: 'dashboard' });

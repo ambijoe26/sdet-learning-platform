@@ -19,7 +19,6 @@ interface ViewState {
 const AppContent: React.FC = () => {
   const { user, setUser } = useProgress();
   const [viewState, setViewState] = useState<ViewState>({ view: 'dashboard' });
-  const [appVersion, setAppVersion] = useState('1.0.0');
 
   useEffect(() => {
     // Check for user on mount

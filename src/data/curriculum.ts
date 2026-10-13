@@ -1,4 +1,4 @@
-import { Course, Module, Lesson, Exercise, Quiz, Project } from '../types';
+import { Course, Module } from '../types';
 
 // VERSION CONTROL
 export const APP_VERSION = {

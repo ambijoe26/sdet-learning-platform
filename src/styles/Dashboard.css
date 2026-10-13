@@ -113,8 +113,14 @@
   color: var(--dark-text);
 }
 
+.stat-info {
+  flex: 1;
+  min-width: 0;
+}
+
 .stat-numbers {
   display: flex;
+  align-items: baseline;
   gap: 5px;
 }
 

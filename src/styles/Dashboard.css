@@ -74,7 +74,7 @@
   border-radius: 12px;
 }
 
-.progress-text {
+.progress-bar-container .progress-text {
   font-weight: 600;
   color: var(--primary-color);
   min-width: 80px;
